@@ -1,0 +1,61 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title pug Module
+        style.
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            header {
+                text-align: center;
+                height: 20vh;
+                line-height: 20vh;
+                background-color: begie;
+            }
+            main {
+                text-align: center;
+            }
+            main h2 {
+                margin-bottom: 2rem;
+            }
+            main ul {
+                display: flex;
+                justify-content: center;
+            }
+            main ul li {
+                font-weight: 600;
+                font-size: 2rem;
+                padding: 0 1rem;
+            }
+         
+        script.
+            const name = prompt('what u r name?');
+            
+    body
+        header
+            h1 Hello pug Module 
+        main 
+            h2 nice to meet u 
+                span 
+            ul#menu_list 
+                li.menu
+                    a(href="#") menu1
+                li.menu
+                    a(href="#") menu2
+                li.menu
+                    a(href="#") menu3
+        script.
+            const span = document.querySelector('span');
+            span.innerHTML = name;
