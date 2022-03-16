@@ -48,7 +48,7 @@ const c = schedule.scheduleJob(rule, () => {
 
 // 0 sun, 6 sat
 // 매 주 토요일 21:10:00
-const d = schedule.scheduleJob({houe: 21, minute: 10, dayOfWeek: 6}, () => {
+const d = schedule.scheduleJob({hour: 21, minute: 10, dayOfWeek: 6}, () => {
     console.log('매 주 토요일 21:10:00 알람');
 });
 
