@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert</title>
+</head>
+<body>
+    <h1>Create a new book</h1>
+    <form method="post">
+        <fieldset>
+            <legend>Create data</legend>
+            <table>
+                <tr>
+                    <td><label for="genre">genre</label></td>
+                    <td><input type="text" name="genre" id="genre"></td>
+                </tr>
+                <tr>
+                    <td><label for="name">name</label></td>
+                    <td><input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="writer">writer</label></td>
+                    <td><input type="text" name="writer" id="writer"></td>
+                </tr>
+                <tr>
+                    <td><label for="releasedate">releasedate</label></td>
+                    <td><input type="datetime" name="releasedate" id="releasedate"></td>
+                </tr>
+            </table>        
+        </fieldset>
+        <input type="submit"/>
+        <input type="button" value="취소" id="cancel">
+    </form>
+    <script>
+        // 취소 버튼 클릭시 조회 페이지로 돌아감
+        const cancel = document.querySelector('#cancel');
+        cancel.addEventListener('click', () => {
+            location.href = '/';
+        });
+    </script>
+</body>
+</html>

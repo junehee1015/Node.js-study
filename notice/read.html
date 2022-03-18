@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book_table</title>
+</head>
+<body>
+    <h1>Book list</h1>
+    <hr>
+    <table width="100%" border="1">
+        <tr>
+            <th>Number</th>
+            <th>Genre</th>
+            <th>Name</th>
+            <th>Writer</th>
+            <th>Releasedate</th>
+            <th>Modify</th>
+            <th>Delete</th>
+        </tr>
+        <% data.forEach((value, index) => { %>
+        <tr>
+            <td><%= value.number %></td>
+            <td><%= value.genre %></td>
+            <td><%= value.name %></td>
+            <td><%= value.writer %></td>
+            <td><%= value.releasedate %></td>
+            <td><a href="/modify/<%= value.number %>">Modify</a></td>
+            <td><a href="/delete/<%= value.number %>">Delete</a></td>
+        </tr>
+        <% }); %>
+    </table>
+    <hr>
+    <form action="/create" method="'get">
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>
